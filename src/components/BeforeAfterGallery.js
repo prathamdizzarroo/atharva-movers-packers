@@ -22,11 +22,11 @@ export default function BeforeAfterGallery() {
           {moves.map((move, idx) => (
             <div key={idx} className="flex flex-col md:flex-row gap-6 items-center justify-center">
               <div className="flex-1 text-center">
-                <img src={move.before} alt="Before" className="rounded-lg shadow w-full h-40 object-cover mb-2" />
+                <img src={move.before} alt="Before" className="rounded-lg shadow w-full h-40 object-cover mb-2" loading="lazy" />
                 <div className="text-sm text-gray-600">Before: {move.label}</div>
               </div>
               <div className="flex-1 text-center">
-                <img src={move.after} alt="After" className="rounded-lg shadow w-full h-40 object-cover mb-2" />
+                <img src={move.after} alt="After" className="rounded-lg shadow w-full h-40 object-cover mb-2" loading="lazy" />
                 <div className="text-sm text-gray-600">After: {move.label}</div>
               </div>
             </div>

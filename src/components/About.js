@@ -4,7 +4,14 @@ import { FaCheck } from 'react-icons/fa';
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <motion.section
+      id="about"
+      className="py-20 bg-gray-50"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <motion.div 
@@ -18,6 +25,7 @@ export default function About() {
               src="https://images.pexels.com/photos/4246100/pexels-photo-4246100.jpeg?auto=compress&w=800"
               alt="Indian family moving with boxes"
               className="rounded-lg shadow-xl h-[400px] w-full object-cover"
+              loading="lazy"
             />
           </motion.div>
           
@@ -56,6 +64,6 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 } 

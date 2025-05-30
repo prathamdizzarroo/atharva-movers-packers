@@ -55,6 +55,7 @@ export default function Process() {
                   src={step.image}
                   alt={step.title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                   <div className="text-white bg-blue-600 p-3 rounded-full">

@@ -10,11 +10,13 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AnimatedBackground from './components/AnimatedBackground';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
     <div className="App relative min-h-screen bg-gray-50">
       <AnimatedBackground />
+      <ScrollToTopButton />
       <div className="relative">
         <Header />
         <main>

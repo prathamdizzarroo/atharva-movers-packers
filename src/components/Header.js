@@ -24,7 +24,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-xl transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4">
         {/* Top bar with contact info */}
         <div className="hidden md:flex justify-end items-center py-2 border-b">

@@ -5,7 +5,14 @@ import AnimatedBackground from './AnimatedBackground';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <motion.section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
       <AnimatedBackground />
       
       {/* Background Image with Parallax */}
@@ -116,6 +123,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 } 
