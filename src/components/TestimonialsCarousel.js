@@ -36,7 +36,7 @@ export default function TestimonialsCarousel() {
       <div className="max-w-2xl mx-auto text-center">
         <h3 className="text-2xl font-bold mb-8">What Our Customers Say</h3>
         <div className="bg-yellow-100 rounded-lg p-8 shadow flex flex-col items-center">
-          <img src={t.image} alt={t.name} className="w-20 h-20 rounded-full mb-4 object-cover border-2 border-yellow-400" loading="lazy" />
+          <img src={t.image} alt={t.name} className="w-20 h-20 rounded-full mb-4 object-cover border-2 border-yellow-400" />
           <p className="italic mb-4">"{t.feedback}"</p>
           <div className="flex gap-1 mb-2">
             {[...Array(Math.floor(t.rating))].map((_, i) => <FaStar key={i} className="text-yellow-500" />)}

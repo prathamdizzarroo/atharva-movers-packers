@@ -25,7 +25,6 @@ export default function About() {
               src="https://images.pexels.com/photos/4246100/pexels-photo-4246100.jpeg?auto=compress&w=800"
               alt="Indian family moving with boxes"
               className="rounded-lg shadow-xl h-[400px] w-full object-cover"
-              loading="lazy"
             />
           </motion.div>
           

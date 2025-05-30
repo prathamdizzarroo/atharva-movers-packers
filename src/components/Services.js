@@ -45,46 +45,49 @@ export default function Services() {
   return (
     <motion.section
       id="services"
-      className="py-20 bg-white"
+      className="py-20 bg-gradient-to-br from-primary-50 via-white to-accent-50 z-20 relative"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.4 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-900">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-800">Our Services</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We offer comprehensive moving and packing services to make your relocation smooth and hassle-free.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px] bg-white border border-primary-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="relative bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group border-l-8 border-accent-500"
             >
-              <div className="relative h-48">
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-100/40 via-white/0 to-accent-100/40 pointer-events-none z-0" />
+              {/* Floating Icon */}
+              <div className="absolute -top-7 left-6 z-10">
+                <div className="bg-primary-500 text-white p-4 rounded-full shadow-lg border-4 border-white group-hover:scale-110 group-hover:bg-accent-500 transition-transform duration-300">
+                  {service.icon}
+                </div>
+              </div>
+              {/* Service Image */}
+              <div className="h-44 w-full overflow-hidden rounded-t-2xl">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                  <div className="text-white bg-blue-600 p-3 rounded-full">
-                    {service.icon}
-                  </div>
-                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+              <div className="p-8 pt-12 relative z-10">
+                <h3 className="text-xl font-bold mb-2 text-primary-800">{service.title}</h3>
+                <p className="text-gray-600 mb-2">{service.description}</p>
               </div>
             </motion.div>
           ))}

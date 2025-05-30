@@ -112,7 +112,7 @@ export default function QuoteForm() {
                     </div>
                     <textarea name="requirement" value={form.requirement} onChange={handleChange} placeholder="Requirement" className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200 min-h-[80px] mt-4" required></textarea>
                     <div className="flex flex-col md:flex-row gap-4 items-center mt-4">
-                      <img src="https://dummyimage.com/80x30/cccccc/000000&text=7+9+9+9" alt="captcha" className="border rounded" loading="lazy" />
+                      <img src="https://dummyimage.com/80x30/cccccc/000000&text=7+9+9+9" alt="captcha" className="border rounded" />
                       <input name="captcha" value={form.captcha} onChange={handleChange} type="text" placeholder="Enter digits from image" className="flex-1 p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200" required />
                     </div>
                   </motion.div>
@@ -177,7 +177,7 @@ export default function QuoteForm() {
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t, idx) => (
               <div key={idx} className="bg-yellow-100 rounded-lg p-6 shadow text-center flex flex-col items-center">
-                <img src={t.image} alt={t.name} className="w-20 h-20 rounded-full mb-4 object-cover border-2 border-yellow-400" loading="lazy" />
+                <img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-2 border-yellow-400" />
                 <p className="italic mb-4">"{t.feedback}"</p>
                 <span className="font-bold text-yellow-700">- {t.name}</span>
               </div>
@@ -192,7 +192,7 @@ export default function QuoteForm() {
           <h3 className="text-2xl font-bold text-center mb-8">Gallery</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryImages.map((img, idx) => (
-              <img key={idx} src={img} alt={`Gallery ${idx+1}`} className="rounded-lg shadow w-full h-32 object-cover" loading="lazy" />
+              <img key={idx} src={img} alt={`Gallery ${idx+1}`} className="rounded-lg shadow w-full h-32 object-cover" />
             ))}
           </div>
         </div>

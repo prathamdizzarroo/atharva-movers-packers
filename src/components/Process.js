@@ -31,46 +31,56 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-20 bg-gray-50">
+    <motion.section
+      id="process"
+      className="py-20 bg-gradient-to-r from-secondary-50 via-white to-primary-50 relative"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-900">Our Moving Process</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-secondary-800">Our Moving Process</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We follow a systematic approach to ensure a smooth and stress-free moving experience.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 min-h-[400px] bg-white border border-primary-200">
+        {/* Timeline/Stepper */}
+        <div className="relative flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0 overflow-x-auto pb-8">
+          {/* Connecting Line */}
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-200 via-accent-200 to-secondary-200 z-0" style={{transform: 'translateY(-50%)'}} />
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="relative z-10 flex flex-col items-center bg-white rounded-2xl shadow-lg px-6 py-8 w-full max-w-xs mx-auto lg:mx-0 lg:w-64 group"
             >
-              <div className="relative h-48">
-                <img
-                  src={step.image}
-                  alt={step.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                  <div className="text-white bg-blue-600 p-3 rounded-full">
-                    {step.icon}
-                  </div>
-                </div>
+              {/* Step Number Circle */}
+              <div className={`flex items-center justify-center w-14 h-14 rounded-full text-2xl font-bold mb-4 border-4 ${index === 0 ? 'bg-primary-500 border-primary-200 text-white' : index === steps.length-1 ? 'bg-secondary-500 border-secondary-200 text-white' : 'bg-accent-500 border-accent-200 text-white'} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                {index + 1}
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+              {/* Icon */}
+              <div className="mb-4 text-3xl text-primary-600 group-hover:text-accent-500 transition-colors duration-300">
+                {step.icon}
               </div>
+              {/* Image */}
+              <div className="h-24 w-24 mb-4 rounded-xl overflow-hidden shadow">
+                <img src={step.image} alt={step.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <h3 className="text-lg font-bold mb-2 text-primary-800">{step.title}</h3>
+              <p className="text-gray-600 text-center">{step.description}</p>
+              {/* Connector for mobile */}
+              {index < steps.length - 1 && (
+                <div className="lg:hidden w-1 h-8 bg-gradient-to-b from-primary-200 via-accent-200 to-secondary-200 my-2 rounded-full" />
+              )}
             </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 } 
