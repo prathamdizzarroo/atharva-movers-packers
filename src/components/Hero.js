@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import WavePattern from './WavePattern';
 import AnimatedBackground from './AnimatedBackground';
+import teamTruck from '../assets/images/team-truck.jpg';
 
 export default function Hero() {
   return (
@@ -36,7 +37,8 @@ export default function Hero() {
       <WavePattern color="#d946ef" opacity="0.1" className="bottom-0 rotate-180" />
 
       {/* Content */}
-      <div className="relative max-w-4xl mx-auto px-4 text-center text-white">
+      <div className="relative max-w-4xl mx-auto px-4 text-center text-white flex flex-col md:flex-row items-center gap-8">
+        <div className="flex-1">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -122,6 +124,10 @@ export default function Hero() {
             <span>24/7 Support</span>
           </div>
         </motion.div>
+        </div>
+        <div className="flex-1 flex justify-center md:justify-end mt-8 md:mt-0">
+          <img src={teamTruck} alt="Atharva Movers and Packers Team" className="rounded-lg shadow-lg max-w-xs w-full h-auto object-cover border-4 border-white/20" loading="lazy" />
+        </div>
       </div>
     </motion.section>
   );

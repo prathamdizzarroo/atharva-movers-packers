@@ -7,25 +7,25 @@ const steps = [
     icon: <FaPhone className="text-3xl" />,
     title: 'Request Quote',
     description: 'Contact us for a free quote and consultation.',
-    image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&w=400', // Indian consultation
+    image: 'https://images.pexels.com/photos/3182764/pexels-photo-3182764.jpeg?auto=compress&w=400', // Person on phone or filling form
   },
   {
     icon: <FaCalculator className="text-3xl" />,
     title: 'Get Estimate',
     description: 'Receive a detailed estimate based on your requirements.',
-    image: 'https://images.pexels.com/photos/4246090/pexels-photo-4246090.jpeg?auto=compress&w=400', // Indian office move
+    image: 'https://images.pexels.com/photos/4386375/pexels-photo-4386375.jpeg?auto=compress&w=400', // Calculator, paperwork, business meeting
   },
   {
     icon: <FaBox className="text-3xl" />,
     title: 'Packing & Loading',
     description: 'Professional packing and careful loading of your belongings.',
-    image: 'https://images.pexels.com/photos/1439226/pexels-photo-1439226.jpeg?auto=compress&w=400', // Indian workers packing
+    image: 'https://images.pexels.com/photos/5025502/pexels-photo-5025502.jpeg?auto=compress&w=400', // Packers loading boxes
   },
   {
     icon: <FaTruck className="text-3xl" />,
     title: 'Safe Delivery',
     description: 'Timely delivery and unpacking at your new location.',
-    image: 'https://images.unsplash.com/photo-1600585153937-01c3b6c1b2b8?auto=format&fit=crop&w=400&q=80', // Indian movers with boxes
+    image: 'https://images.pexels.com/photos/4246100/pexels-photo-4246100.jpeg?auto=compress&w=400', // Happy family receiving boxes
   }
 ];
 

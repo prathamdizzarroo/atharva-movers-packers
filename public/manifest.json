@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Atharva Movers",
+  "name": "Atharva Movers & Packers - Indore, MP",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,9 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0ea5e9",
+  "background_color": "#ffffff",
+  "description": "Professional packing, moving, and relocation services in Indore, Madhya Pradesh. Trusted, safe, and affordable home and office shifting.",
+  "scope": ".",
+  "orientation": "portrait"
 }

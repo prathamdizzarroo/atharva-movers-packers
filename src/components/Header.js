@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaPhone } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import atharvaLogo from '../assets/images/atharva-movers-logo.png';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -40,31 +41,9 @@ export default function Header() {
         {/* Main header with logo and navigation */}
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-3">
-            {/* Custom SVG Logo */}
-            <div className="w-12 h-12">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <defs>
-                  <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#2563EB' }} />
-                    <stop offset="100%" style={{ stopColor: '#1D4ED8' }} />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M50 10 L80 30 L80 70 L50 90 L20 70 L20 30 Z"
-                  fill="url(#logoGradient)"
-                  className="transform transition-transform duration-300 hover:scale-105"
-                />
-                <path
-                  d="M35 40 L65 40 L65 60 L35 60 Z"
-                  fill="white"
-                  className="transform transition-transform duration-300 hover:scale-105"
-                />
-                <path
-                  d="M40 45 L60 45 L60 55 L40 55 Z"
-                  fill="#2563EB"
-                  className="transform transition-transform duration-300 hover:scale-105"
-                />
-              </svg>
+            {/* Company Logo */}
+            <div className="w-16 h-16">
+              <img src={atharvaLogo} alt="Atharva Movers & Packers Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent">
@@ -77,7 +56,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex gap-8">
+          <nav className="hidden md:flex gap-8" role="navigation" aria-label="Main navigation">
             {navLinks.map(link => (
               <a 
                 key={link.name} 
@@ -94,6 +73,7 @@ export default function Header() {
             onClick={toggleMenu}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none"
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
           >
             <svg 
               className="w-6 h-6" 

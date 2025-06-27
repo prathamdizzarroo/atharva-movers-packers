@@ -8,16 +8,16 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81', // Deep Indigo
+          50: '#f0f6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#60a5fa',
+          400: '#2563eb',
+          500: '#1d4ed8',
+          600: '#1e40af',
+          700: '#1e3a8a',
+          800: '#1e293b',
+          900: '#0f172a',
         },
         secondary: {
           50: '#ecfdf5',
@@ -32,21 +32,27 @@ module.exports = {
           900: '#064e3b',
         },
         accent: {
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
-          400: '#fb923c',
-          500: '#f59e42', // Gold/Amber
+          50: '#fffbea',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24', // Gold
+          500: '#f59e42',
           600: '#ea580c',
           700: '#c2410c',
           800: '#9a3412',
           900: '#7c2d12',
         },
+        success: {
+          100: '#d1fae5',
+          400: '#34d399', // Green accent
+          600: '#059669',
+        },
+        white: '#ffffff',
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hero-gradient': 'linear-gradient(90deg, #2563eb 0%, #60a5fa 100%)',
+        'section-gradient': 'linear-gradient(90deg, #f0f6ff 0%, #ffffff 100%)',
       },
     },
     fontFamily: {

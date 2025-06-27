@@ -1,48 +1,55 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHome, FaBuilding, FaCar, FaTruck, FaWarehouse, FaBox } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const services = [
   {
     icon: <FaHome className="text-3xl" />,
     title: 'Home Relocation',
     description: 'Complete home shifting services with professional packing and unpacking.',
-    image: 'https://images.pexels.com/photos/4246100/pexels-photo-4246100.jpeg?auto=compress&w=400', // Indian family with boxes
+    image: 'https://images.pexels.com/photos/4246100/pexels-photo-4246100.jpeg?auto=compress&w=400', // Family moving boxes in home
   },
   {
     icon: <FaBuilding className="text-3xl" />,
     title: 'Office Shifting',
     description: 'Efficient office relocation with minimal business disruption.',
-    image: 'https://images.pexels.com/photos/4246090/pexels-photo-4246090.jpeg?auto=compress&w=400', // Indian office move
+    image: 'https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&w=400', // Office workers moving boxes
   },
   {
     icon: <FaCar className="text-3xl" />,
     title: 'Car/Bike Transportation',
     description: 'Safe and secure vehicle transportation services.',
-    image: 'https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&w=400', // Indian family with car
+    image: 'https://images.pexels.com/photos/193993/pexels-photo-193993.jpeg?auto=compress&w=400', // Car being loaded for transport
   },
   {
     icon: <FaTruck className="text-3xl" />,
     title: 'Local & Interstate Moves',
     description: 'Reliable moving services for both local and interstate relocations.',
-    image: 'https://images.unsplash.com/photo-1600585153937-01c3b6c1b2b8?auto=format&fit=crop&w=400&q=80', // Indian movers with boxes
+    image: 'https://images.pexels.com/photos/7464706/pexels-photo-7464706.jpeg?auto=compress&w=400', // Moving truck on road
   },
   {
     icon: <FaWarehouse className="text-3xl" />,
     title: 'Warehousing',
     description: 'Secure storage solutions for your belongings.',
-    image: 'https://images.pexels.com/photos/5025502/pexels-photo-5025502.jpeg?auto=compress&w=400', // Indian warehouse
+    image: 'https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&w=400', // Modern warehouse
   },
   {
     icon: <FaBox className="text-3xl" />,
     title: 'Packing & Unpacking',
     description: 'Professional packing services using high-quality materials.',
-    image: 'https://images.pexels.com/photos/1439226/pexels-photo-1439226.jpeg?auto=compress&w=400', // Indian workers packing
+    image: 'https://images.pexels.com/photos/5025502/pexels-photo-5025502.jpeg?auto=compress&w=400', // Packers wrapping/unpacking boxes
   }
 ];
 
 export default function Services() {
   return (
+    <>
+      <Helmet>
+        <title>Our Services | Atharva Movers & Packers Indore, MP</title>
+        <meta name="description" content="Explore our professional moving, packing, car transport, warehousing, and relocation services in Indore, Madhya Pradesh." />
+        <meta name="keywords" content="services, movers, packers, relocation, Indore, MP, Madhya Pradesh, Atharva Movers" />
+      </Helmet>
     <motion.section
       id="services"
       className="py-20 bg-gradient-to-br from-primary-50 via-white to-accent-50 z-20 relative"
@@ -94,5 +101,6 @@ export default function Services() {
         </div>
       </div>
     </motion.section>
+    </>
   );
 } 
