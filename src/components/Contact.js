@@ -41,7 +41,7 @@ export default function Contact() {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <FaPhone className="text-blue-600 mr-3" />
-                    <span>+91 9999999999</span>
+                    <span>+91 9699840437</span> / <span>+91 8950851480</span>
                   </div>
                   <div className="flex items-center">
                     <FaWhatsapp className="text-green-600 mr-3" />
@@ -49,7 +49,7 @@ export default function Contact() {
                   </div>
                   <div className="flex items-center">
                     <FaEnvelope className="text-blue-600 mr-3" />
-                    <span>info@atharvamovers.com</span>
+                    <span>info@atharvalogistics.com</span>
                   </div>
                   <div className="flex items-center">
                     <FaMapMarkerAlt className="text-blue-600 mr-3" />

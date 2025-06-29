@@ -47,8 +47,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <p className="text-gray-400">123, Main Street, Mumbai, India</p>
-            <p className="text-gray-400">Phone: +91 9999999999</p>
-            <p className="text-gray-400">Email: info@atharvamovers.com</p>
+            <p className="text-gray-400">Phone: +91 9699840437 / +91 8950851480</p>
+            <p className="text-gray-400">Email: info@atharvalogistics.com</p>
             <div className="flex space-x-4 mt-4">
               {socialLinks.map((link, idx) => (
                 <a key={idx} href={link.href} className="text-gray-400 hover:text-white transition-colors duration-200">

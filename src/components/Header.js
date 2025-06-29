@@ -29,12 +29,16 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Top bar with contact info */}
         <div className="hidden md:flex justify-end items-center py-2 border-b">
-          <a href="tel:+919999999999" className="flex items-center text-gray-600 hover:text-blue-700 mr-6">
+          <a href="tel:+919699840437" className="flex items-center text-gray-600 hover:text-blue-700 mr-6">
             <FaPhone className="mr-2" />
-            <span>+91 9999999999</span>
+            <span>+91 9699840437</span>
           </a>
-          <a href="mailto:info@atharvamovers.com" className="text-gray-600 hover:text-blue-700">
-            info@atharvamovers.com
+          <a href="tel:+918950851480" className="flex items-center text-gray-600 hover:text-blue-700 mr-6">
+            <FaPhone className="mr-2" />
+            <span>+91 8950851480</span>
+          </a>
+          <a href="mailto:info@atharvalogistics.com" className="text-gray-600 hover:text-blue-700">
+            info@atharvalogistics.com
           </a>
         </div>
         
@@ -123,12 +127,22 @@ export default function Header() {
                 ))}
                 <div className="px-4 py-2 border-t">
                   <a
-                    href="tel:+919999999999"
+                    href="tel:+919699840437"
                     onClick={closeMenu}
                     className="flex items-center text-gray-700 hover:text-blue-700"
                   >
                     <FaPhone className="mr-2" />
-                    <span>+91 9999999999</span>
+                    <span>+91 9699840437</span>
+                  </a>
+                </div>
+                <div className="px-4 py-2 border-t">
+                  <a
+                    href="tel:+918950851480"
+                    onClick={closeMenu}
+                    className="flex items-center text-gray-700 hover:text-blue-700"
+                  >
+                    <FaPhone className="mr-2" />
+                    <span>+91 8950851480</span>
                   </a>
                 </div>
               </div>

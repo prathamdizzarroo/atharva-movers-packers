@@ -5,7 +5,7 @@ export default function LiveChatWhatsApp() {
   return (
     <div className="fixed bottom-24 right-6 z-50 flex flex-col gap-4 items-end">
       <a
-        href="https://wa.me/919999999999"
+        href="https://wa.me/919699840437"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center justify-center text-2xl animate-bounce"
